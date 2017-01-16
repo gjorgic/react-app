@@ -2,7 +2,7 @@ import React from 'react'
 import SidebarMenu from '../../components/SidebarMenu';
 
 
-class Admin extends React.Component {
+class AdminLogin extends React.Component {
 	constructor(props) {
 		super(props)
 	}
@@ -10,32 +10,25 @@ class Admin extends React.Component {
 	render() {
 		return (
 			<div data-reactroot="">
-			    <header className="navbar navbar-default navbar-fixed-top">
-			        <div className="container-fluid">
-			            <div className="navbar-header">
-			                <a className="navbar-brand"><img alt="Brand" width="" height="40" src="./img/logo.png" />
-			                </a>
-			                <ul className="nav navbar-nav navbar-right">
-			                    <li>
-			                        <a href="#">
-			                            <span className="glyphicon glyphicon-log-out" aria-hidden="true"></span>
-			                        </a>
-			                    </li>
-			                </ul>
-			            </div>
-			            <div className="collapse navbar-collapse"></div>
-			        </div>
-			    </header>
 			    <section className="container-fluid body-container">
-			        <div className="row">
-			            <SidebarMenu />
-			            <div className="col-sm-offset-3 col-sm-9 col-md-offset-2 col-md-10 content">
-			                <div className="page-sub-menu">
-			                	<a className="btn btn-primary" href="#/distributors/create">Kreiraj trgovinu</a>
-			                </div>
-			                <h1>Trgovine</h1>
-			            </div>
-			        </div>
+				    <div className="panel panel-primary form-signin">
+					    <div className="panel-heading">
+					        <h2 className="form-signin-heading">Please sign in</h2>
+					    </div>
+					    <div className="panel-body">
+					        <form>
+					            <div className="form-group">
+					                <label for="inputEmail">Username</label>
+					                <input type="email" id="inputEmail" className="form-control" placeholder="Email address" name="username" />
+					            </div>
+					            <div className="form-group">
+					                <label for="inputPassword">Password</label>
+					                <input type="password" id="inputPassword" className="form-control" placeholder="Password" name="password" />
+					            </div>
+					            <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+					        </form>
+					    </div>
+					</div>
 			    </section>
 			    <footer></footer>
 			    <div className="splash-screen">
@@ -45,4 +38,4 @@ class Admin extends React.Component {
 	}
 }
 
-export default Admin;
+export default AdminLogin;
