@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import createBrowserHistory from 'history/lib/createBrowserHistory'
 import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 import { Router, Route, useRouterHistory } from 'react-router'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import { AppContainer } from 'react-hot-loader';
 
-
+var __BASENAME__ = JSON.stringify(process.env.BASENAME || '')
 // ========================================================
 // Browser History Setup
 // ========================================================
